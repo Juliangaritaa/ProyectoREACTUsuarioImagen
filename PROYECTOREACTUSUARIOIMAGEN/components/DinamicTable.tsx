@@ -29,7 +29,6 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { esES } from '@mui/x-data-grid/locales';
 import TableRowsIcon from '@mui/icons-material/TableRows';
-import VisibilityIcon from '@mui/icons-material/Visibility';
 
 interface DinamicTableProps {
     rows: any[];
@@ -118,31 +117,6 @@ const DinamicTable: React.FC<DinamicTableProps> = ({
     useEffect(() => {
         setTableRows(rows);
     }, [rows]);
-
-    // Generate avatar color based on string
-    const getAvatarColor = (text: string) => {
-        const colors = [
-            theme.palette.primary.main,
-            theme.palette.secondary.main,
-            theme.palette.error.main,
-            theme.palette.warning.main,
-            theme.palette.info.main,
-            theme.palette.success.main,
-        ];
-
-        // Use a simple character sum to select a color
-        const charSum = text.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
-        return colors[charSum % colors.length];
-    };
-
-    const getNameInitials = (name: string) => {
-        if (!name) return '?';
-        const parts = name.split(' ');
-        if (parts.length >= 2) {
-            return `${parts[0][0]}${parts[1][0]}`.toUpperCase();
-        }
-        return name.substring(0, 2).toUpperCase();
-    };
 
     const columnasBotones: GridColDef[] = [
         ...columns,

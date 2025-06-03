@@ -17,7 +17,7 @@ const SubirProductosForm: React.FC<Props> = ({ onUpload }) => {
 
     return (
         <form onSubmit={handleSubmit} className="p-4 border rounded shadow w-fit">
-      <h2 className="text-lg font-semibold mb-2">Subida masiva de productos</h2>
+      <h2 className="text-lg font-semibold mb-2">Subida masiva de productos </h2>
       <input
         type="file"
         ref={fileInputRef}

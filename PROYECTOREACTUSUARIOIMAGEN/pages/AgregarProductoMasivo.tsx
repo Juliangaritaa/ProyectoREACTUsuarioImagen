@@ -1,4 +1,3 @@
-import React from "react";
 import SubirProductosForm from "../components/SubirProductosForm";
 
 const AgregarProductoMasivo = () => {
